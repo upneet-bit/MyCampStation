@@ -40,7 +40,7 @@
                 <div class="col-md-4">
 
                         <% if(campground.image.length){ %>
-                    <img id="thumbnail" class="img-fluid" alt="" src="<%=campground.image[0].url %>">
+                    <img id="thumbnail" class="img-fluid" alt="" src="<%=campground.image[0].fitinframe %>">
                     <% }else{ %>
                         <img id="thumbnail" class="img-fluid" alt=""
                         src="https://res.cloudinary.com/dx8saxi8r/image/upload/v1610079637/YelpCamp/crdaplsd8ozwra3nm9a9.jpg">
@@ -49,7 +49,7 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><%= campground.title %> </h5>
-                        <p class="card-text"><%= campground.description %></p>
+                        <p class="card-text"><%= campground.description.substring(0,300)%>......</p>
                         <p class="card-text">
                             <small class="text-muted"><%= campground.location%></small>
                         </p>
